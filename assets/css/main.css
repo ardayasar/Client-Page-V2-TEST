@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+*{
+    font-family: 'DM Sans', sans-serif;
+}
+
+html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow: auto;
+}
+
+/* Bar Rules */
+
+div[class="bar"]{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 340px;
+    height: 100%;
+    background-color: #121432;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div[class="bar"] > div[class="userpp"]{
+    width: 140px;
+    height: 140px;
+    margin: 40px 0px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div[class="bar"] > a{
+    width: 100%;
+}
+
+div[class="bar"] > a > button{
+    width: 100%;
+    padding: 10px 0px;
+    font-size: 20px;
+    margin: 0;
+    background-color: transparent;
+    border: 0;
+    color: #FDFDFD;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+div[class="bar"] > a:hover > button{
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+div[class="bar"] > a[selected="true"]{
+    color: #fefefe;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+div[class="bar"] > a[main="logout"]{
+    margin-top: auto;
+}
+
+/* Content Rules */
+
+div[class="all"]{
+    width: 100%;
+    height: 100%;
+    background-color: #EBF2FC;
+    padding: 0px 20px;
+    overflow-y: scroll;
+}
+
+div[class="all"] > .previewPDF{
+    position: absolute;
+    width: 380px;
+    height: 85%;
+    padding: 40px 20px 20px 20px;
+    background-color: black;
+    z-index: 6;
+    border-radius: 18px;
+    right: 20px;
+    margin-top: 3.5%;
+    box-shadow: 0px 0px 10px 0.1px rgba(0, 0, 0, 0.3);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+div[class="all"] > .previewPDF > p{
+    color: white;
+    font-size: 28px;
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    cursor: pointer;
+}
+
+div[class="all"] > .previewPDF > iframe{
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+div[class="all"] > div[class="search"]{
+    width: 80%;
+    height: 32px;
+    border-radius: 25px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 20px;
+    padding: 4px 12px;
+    background-color: #F5F9FC;
+    gap: 8px;
+    box-shadow: 0px 0px 6px 0.1px rgba(0, 0, 0, 0.2);
+}
+
+div[class="all"] > div[class="search"] > input{
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    border: 0;
+    background-color: transparent;
+}
+
+div[class="all"] > div[class="search"] > input::placeholder{
+    color: #84afeaaa;
+}
+
+div[class="all"] > div[class="search"] > i{
+    color: #CEDFF7;
+}
+
+div[class="all"] > h1{
+    color: #033377;
+}
+
+div[class="all"] > div[class="fast"]{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+div[class="all"] > div[class="fast"] > div[class="operation"]{
+    width: 140px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 12px;
+    color: #FFFDFD;
+    box-shadow: 0px 0px 8px 0.1px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+div[class="all"] > div[class="fast"] > div[class="operation"] > div[class="icon"]{
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    font-size: 20px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+div[class="all"] > div[class="fastcats"]{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+div[class="all"] > div[class="fastcats"] > a > button{
+    width: 160px;
+    height: 54px;
+    padding: 8px;
+    border: 2px solid rgb(146, 146, 146);
+    border-radius: 8px;
+    background-color: transparent;
+    font-size: 14px;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+div[class="all"] > div[class="fastcats"] > a:hover > button{
+    border: 2px solid rgb(63, 143, 255);
+}
+
+div[class="all"] > div[class="fastcontents"]{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px
+}
+
+div[class="all"] > div[class="fastcontents"] > div[class="content"]{
+    width: 90%;
+    height: 46px;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    box-shadow: 0px 0px 6px 0.1px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+div[class="all"] > div[class="fastcontents"] > div[class="content"] > *{
+    width: 33%;
+    text-align: center;
+}
+
+div[class="all"] > .actioncontent{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+div[class="all"] > .actioncontent > a{
+    width: 100%;
+}
+
+
+div[class="all"] > .actioncontent > a > button{
+    width: 100%;
+    background-color: #1376ff;
+    border: 0;
+    border-radius: 4px;
+    color: white;
+    padding: 5px 10px;
+}
+
+
+td:nth-child(4){
+    display: flex;
+    flex-direction: row;
+}
+
+td > button{
+    width: 30px;
+    height: 30px;
+    background-color: #ffffff;
+    border: 2px solid rgb(131, 131, 131);
+    border-radius: 4px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullCover{
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000b2;
+    display: none;
+}
+
+.fullCover[id="newContent"] > .inputHolder{
+    width: 500px;
+    height: auto;
+}
+
+.fullCover > .inputHolder{
+    padding: 20px 20px;
+    background-color: rgb(15, 31, 212);
+    width: 240px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 8px;
+}
+
+.fullCover > .inputHolder > button[id="addCategory"]{
+    width: 89%;
+    background-color: rgb(21, 21, 21);
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 10px 0.1px rgba(21, 21, 21, 0.399);
+}
+
+.fullCover > .inputHolder > button[id="addCategory"]:hover{
+    border: 1px solid rgba(255, 255, 255, 0.583);
+}
+
+.fullCover > .inputHolder > button[id="closeCategory"]{
+    width: 50%;
+    background-color: rgb(255, 0, 0);
+    border: 1px solid rgb(255, 0, 0);
+    box-shadow: 0px 0px 10px 0.1px rgba(255, 0, 0, 0.399);
+    color: rgb(255, 255, 255);
+}
+
+.fullCover > .inputHolder > button[id="closeCategory"]:hover{
+    border: 1px solid rgba(255, 255, 255, 0.583);
+}
+
+#rotate{
+    animation-name: rotation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotation {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}

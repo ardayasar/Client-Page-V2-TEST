@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/img/icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <script src="https://kit.fontawesome.com/12080290df.js" crossorigin="anonymous"></script>
+    <title>Bu Hikaye Senin | Panel</title>
+</head>
+<body>
+
+    <div class="fullCover" id="newCategory">
+        <div class="inputHolder">
+            <input type="text" name="categoryName" id="inputCatName" placeholder="Kategori Adı">
+            <button type="button" id="addCategory" style="color: white;">Ekle</button>
+            <button type="reset" id="closeCategory"><i class="fa-sharp fa-solid fa-xmark" style="color: #ffffff;"></i></button>
+        </div>
+    </div>
+
+    <div class="bar">
+        <img src="./assets/img/logo.png" width="180px" style="margin-top: 12px;">
+        <div class="userpp" style=" background-image: url('./assets/img/emptyuser.png');"></div>
+        <a href="index" selected='true'><button type="button"><i class="fa-solid fa-house"></i> Anasayfa</button></a>
+        <a href="#"><button type="button" style="color: #E8533F;"><i class="fa-solid fa-server"></i> Cihazlarım <br><span style="font-size: 12px; color: #E8533F;">Aktif Değil</span></button></a>
+        <a href="contents"><button type="button"><i class="fa-solid fa-folder"></i> İçeriklerim</button></a>
+        <a href="#" main="logout"><button type="button"><i class="fa-solid fa-right-from-bracket"></i> Çıkış Yap</button></a>
+    </div>
+
+    <div class="all">
+        <div class="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="searchSide" placeholder="İçeriklerde ara...">
+        </div>
+
+        <h1>Hızlı İşlemler</h1>
+        <div class="fast">
+            <div class="operation" id="addNewCategory" style="background-color: #E8533F;">
+                <div class="icon"><i class="fa-solid fa-folder-plus" style="color: #E8533F;"></i></div>
+                <h3>Yeni Kategori</h3>
+            </div>
+
+            <div class="operation" style="background-color: #01A0B6;" id="newContent">
+                <div class="icon"><i class="fa-solid fa-file-circle-plus" style="color: #01A0B6;"></i></div>
+                <h3>Yeni İçerik</h3>
+            </div>
+        </div>
+        <br>
+        <h1>Kategoriler</h1>
+        <div class="fastcats">
+        </div>
+
+        <br>
+        <h1>Son İçerikler</h1>
+        <div class="fastcontents">
+
+        </div>
+    </div>
+    
+</body>
+<script src="./assets/js/homedata.js"></script>
+</html>
